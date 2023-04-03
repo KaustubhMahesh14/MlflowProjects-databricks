@@ -1,0 +1,26 @@
+artifact_path: FraudPrediction-XGB
+databricks_runtime: 12.1.x-cpu-ml-scala2.12
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.0.2
+mlflow_version: 2.1.1
+model_uuid: add7df62bb184fd3a1f24f2fb0eb3572
+run_id: 4745b072d7f54e3fab67ef44ccf832c2
+signature:
+  inputs: '[{"name": "step", "type": "long"}, {"name": "type", "type": "long"}, {"name":
+    "amount", "type": "float"}, {"name": "oldBalanceOrig", "type": "float"}, {"name":
+    "newBalanceOrig", "type": "float"}, {"name": "nameDest", "type": "long"}, {"name":
+    "oldBalanceDest", "type": "float"}, {"name": "isFlaggedFraud", "type": "integer"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+utc_time_created: '2023-04-03 22:13:11.857269'
